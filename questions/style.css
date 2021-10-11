@@ -7,7 +7,7 @@
 }
 body{
   background-color: #b8c6db;
-  background-image: linear-gradient(to bottom, #fa04b8 30%, #6a28cc 70%);
+  background-image: linear-gradient(#ff1493,#eb5d39,purple);
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ ul li label{
   cursor: pointer;
 }
 button{
-  background-color: #03cae4;
+  background-color: #ff7b00;
   color: #fff;
   border: none;
   display: block;
@@ -55,9 +55,9 @@ button{
   padding: 1.3rem;
 }
 button:hover{
-  background-color: #04adc4;
+  opacity: 0.8;
 }
 button:focus{
   outline: none;
-  background-color: #44b927;
+  background-color: #ff7b00;
 }
