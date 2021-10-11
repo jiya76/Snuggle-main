@@ -1,4 +1,4 @@
-const quizData = [
+const quesData = [
     {
         question: "Which word describes you better?",
         a: "Carefree",
@@ -46,7 +46,7 @@ function loadQuiz() {
 
     deselectAnswers()
 
-    const currentQuizData = quizData[currentQuiz]
+    const currentQuizData = quesData[currentQuiz]
 
     questionEl.innerText = currentQuizData.question
     a_text.innerText = currentQuizData.a
@@ -71,19 +71,17 @@ function getSelected() {
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if (answer) {
-        if (answer === quizData[currentQuiz].correct) {
+        if (answer === quesData[currentQuiz]) {
             score++
         }
-
         currentQuiz++
-
-        if (currentQuiz < quizData.length) {
+        if (currentQuiz < quesData.length) {
             loadQuiz()
         } else {
             quiz.innerHTML = `
-           <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+           <h2>You answered all questions! </h2>
 
-           <button onclick="location.reload()">Reload</button>
+           <button onclick>Continue to your profile</button>
            `
         }
     }
